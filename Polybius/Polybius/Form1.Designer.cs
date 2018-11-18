@@ -64,11 +64,9 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.rawTextbox = new System.Windows.Forms.TextBox();
-            this.resultTextbox = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.button_ok = new System.Windows.Forms.Button();
-            this.button_switch = new System.Windows.Forms.Button();
+            this.resultTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -392,6 +390,26 @@
             this.rawTextbox.Name = "rawTextbox";
             this.rawTextbox.Size = new System.Drawing.Size(341, 20);
             this.rawTextbox.TabIndex = 36;
+            this.rawTextbox.Click += new System.EventHandler(this.rawTextbox_Click);
+            this.rawTextbox.TextChanged += new System.EventHandler(this.rawTextbox_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(12, 211);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(28, 13);
+            this.label36.TabIndex = 38;
+            this.label36.Text = "Text";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(12, 237);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(55, 13);
+            this.label37.TabIndex = 39;
+            this.label37.Text = "Encrypted";
             // 
             // resultTextbox
             // 
@@ -399,52 +417,14 @@
             this.resultTextbox.Name = "resultTextbox";
             this.resultTextbox.Size = new System.Drawing.Size(341, 20);
             this.resultTextbox.TabIndex = 37;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(12, 211);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(33, 13);
-            this.label36.TabIndex = 38;
-            this.label36.Text = "Metin";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(12, 237);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(38, 13);
-            this.label37.TabIndex = 39;
-            this.label37.Text = "Sonuc";
-            // 
-            // button_ok
-            // 
-            this.button_ok.Location = new System.Drawing.Point(349, 260);
-            this.button_ok.Name = "button_ok";
-            this.button_ok.Size = new System.Drawing.Size(75, 23);
-            this.button_ok.TabIndex = 40;
-            this.button_ok.Text = "Dönüştür";
-            this.button_ok.UseVisualStyleBackColor = true;
-            this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
-            // 
-            // button_switch
-            // 
-            this.button_switch.Location = new System.Drawing.Point(15, 259);
-            this.button_switch.Name = "button_switch";
-            this.button_switch.Size = new System.Drawing.Size(75, 23);
-            this.button_switch.TabIndex = 41;
-            this.button_switch.Text = "Şifreleme";
-            this.button_switch.UseVisualStyleBackColor = true;
-            this.button_switch.Click += new System.EventHandler(this.button_switch_Click);
+            this.resultTextbox.Click += new System.EventHandler(this.resultTextbox_Click);
+            this.resultTextbox.TextChanged += new System.EventHandler(this.resultTextbox_TextChanged);
             // 
             // Polybius
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 311);
-            this.Controls.Add(this.button_switch);
-            this.Controls.Add(this.button_ok);
+            this.ClientSize = new System.Drawing.Size(436, 275);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.resultTextbox);
@@ -530,11 +510,9 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox rawTextbox;
-        private System.Windows.Forms.TextBox resultTextbox;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button_ok;
-        private System.Windows.Forms.Button button_switch;
+        private System.Windows.Forms.TextBox resultTextbox;
     }
 }
 

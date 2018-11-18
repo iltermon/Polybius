@@ -34,44 +34,47 @@ namespace Polybius
             string encrypted = "";
             for (int i = 0; i < raw.Length; i++)
             {
-                if (raw[i] != 'J' && raw[i] != ' ' && raw[i] != 'İ' && raw[i] != 'Ü' && raw[i] != 'Ğ' && raw[i] != 'Ö' && raw[i] != 'Ç' && raw[i] != 'Ş')
+                if (raw[i] <= 'Z' && raw[i] >= 'A' || raw[i]==' ')
                 {
-                    encrypted += table_dic[raw[i]].Item1 + 1;
-                    encrypted += table_dic[raw[i]].Item2 + 1;
-                }
-                else if (raw[i] == 'J' || raw[i] == 'İ')
-                {
-                    encrypted += table_dic['I'].Item1 + 1;
-                    encrypted += table_dic['I'].Item2 + 1;
-                }
-                else if (raw[i] == ' ')
-                {
-                    encrypted += ' ';
-                }
-                else if (raw[i] == 'Ş')
-                {
-                    encrypted += table_dic['S'].Item1 + 1;
-                    encrypted += table_dic['S'].Item2 + 1;
-                }
-                else if (raw[i] == 'Ç')
-                {
-                    encrypted += table_dic['C'].Item1 + 1;
-                    encrypted += table_dic['C'].Item2 + 1;
-                }
-                else if (raw[i] == 'Ö')
-                {
-                    encrypted += table_dic['O'].Item1 + 1;
-                    encrypted += table_dic['O'].Item2 + 1;
-                }
-                else if (raw[i] == 'Ü')
-                {
-                    encrypted += table_dic['U'].Item1 + 1;
-                    encrypted += table_dic['U'].Item2 + 1;
-                }
-                else if (raw[i] == 'Ğ')
-                {
-                    encrypted += table_dic['G'].Item1 + 1;
-                    encrypted += table_dic['G'].Item2 + 1;
+                    if (raw[i] != 'J' && raw[i] != ' ' && raw[i] != 'İ' && raw[i] != 'Ü' && raw[i] != 'Ğ' && raw[i] != 'Ö' && raw[i] != 'Ç' && raw[i] != 'Ş')
+                    {
+                        encrypted += table_dic[raw[i]].Item1 + 1;
+                        encrypted += table_dic[raw[i]].Item2 + 1;
+                    }
+                    else if (raw[i] == 'J' || raw[i] == 'İ')
+                    {
+                        encrypted += table_dic['I'].Item1 + 1;
+                        encrypted += table_dic['I'].Item2 + 1;
+                    }
+                    else if (raw[i] == ' ')
+                    {
+                        encrypted += ' ';
+                    }
+                    else if (raw[i] == 'Ş')
+                    {
+                        encrypted += table_dic['S'].Item1 + 1;
+                        encrypted += table_dic['S'].Item2 + 1;
+                    }
+                    else if (raw[i] == 'Ç')
+                    {
+                        encrypted += table_dic['C'].Item1 + 1;
+                        encrypted += table_dic['C'].Item2 + 1;
+                    }
+                    else if (raw[i] == 'Ö')
+                    {
+                        encrypted += table_dic['O'].Item1 + 1;
+                        encrypted += table_dic['O'].Item2 + 1;
+                    }
+                    else if (raw[i] == 'Ü')
+                    {
+                        encrypted += table_dic['U'].Item1 + 1;
+                        encrypted += table_dic['U'].Item2 + 1;
+                    }
+                    else if (raw[i] == 'Ğ')
+                    {
+                        encrypted += table_dic['G'].Item1 + 1;
+                        encrypted += table_dic['G'].Item2 + 1;
+                    }
                 }
             }
             return encrypted;
@@ -79,47 +82,58 @@ namespace Polybius
         public string Decrypt(string raw)//Şifrelenmis metini normal metine çeviriyor.
         {
             string Decrypt = "";
-            for (int i = 0; i < raw.Length; i++)
-            {
-                if (raw.Length % 2 == 1)//Eğer rakam sayısı tekse sondaki rakamı almamak için substring metodu kullanılıyor.
-                {
-                    raw = raw.Substring(0, raw.Length - 1);
-                    Decrypt += table[Int32.Parse(raw[i].ToString()) - 1, Int32.Parse(raw[i + 1].ToString()) - 1];
-                    i++;
-                }
-                else
-                {
-                    Decrypt += table[Int32.Parse(raw[i].ToString()) - 1, Int32.Parse(raw[i + 1].ToString()) - 1];
-                    i++;
-                }
 
+            for (int i = 0; i < raw.Length && raw.Length > 1; i++)
+            {
+                if (raw[i] >= '0' && raw[i] <= '9')
+                {
+                    if (raw.Length % 2 == 1)//Eğer rakam sayısı tekse sondaki rakamı almamak için substring metodu kullanılıyor.
+                    {
+                        raw = raw.Substring(0, raw.Length - 1);
+                        Decrypt += table[Int32.Parse(raw[i].ToString()) - 1, Int32.Parse(raw[i + 1].ToString()) - 1];
+                        i++;
+                    }
+                    else
+                    {
+                        Decrypt += table[Int32.Parse(raw[i].ToString()) - 1, Int32.Parse(raw[i + 1].ToString()) - 1];
+                        i++;
+                    }
+
+                }
             }
             return Decrypt;
         }
-        private void button_switch_Click(object sender, EventArgs e)
+        private void rawTextbox_Click(object sender, EventArgs e)
+        {
+
+            text = true;
+        }
+
+        private void rawTextbox_TextChanged(object sender, EventArgs e)
         {
             if (text)
+                resultTextbox.Text = Encrypt(rawTextbox.Text.ToUpper());
+            if (string.IsNullOrWhiteSpace(rawTextbox.Text))
             {
-                button_switch.Text = "Çöz";
-                text = false;
                 resultTextbox.Text = String.Empty;
-                rawTextbox.Text = String.Empty;
             }
-            else
+        }
+
+        private void resultTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (!text)
+                rawTextbox.Text = Decrypt(resultTextbox.Text);
+            if (string.IsNullOrWhiteSpace(resultTextbox.Text))
             {
-                button_switch.Text = "Şifreleme";
-                text = true;
-                resultTextbox.Text = String.Empty;
                 rawTextbox.Text = String.Empty;
             }
         }
 
-        private void button_ok_Click(object sender, EventArgs e)
+        private void resultTextbox_Click(object sender, EventArgs e)
         {
-            if (text)
-                resultTextbox.Text = Encrypt(rawTextbox.Text.ToUpper());
-            else
-                resultTextbox.Text = Decrypt(rawTextbox.Text);
+            text = false;
         }
+    
     }
+
 }
