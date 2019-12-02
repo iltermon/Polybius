@@ -7,18 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//TODO: harfleri dogru olmasa bile dogru yorumlama olayini degistir ö o ü u gibi
 namespace Polybius
 {
     public partial class Polybius : Form
     {
-        bool text = true; //Programın ne yapacağını belirtiyor. Eğer metin girilecekse true aksi halde false.
+        bool text = true; //to define function of the program
         
         char[,] table = new char[5, 5] { { 'A', 'B', 'C', 'D', 'E' }, { 'F', 'G', 'H', 'I', 'K' }, { 'L', 'M', 'N', 'O', 'P' }, { 'Q', 'R', 'S', 'T', 'U' }, { 'V', 'W', 'X', 'Y', 'Z' } };
         Dictionary<char, Tuple<int, int>> table_dic = new Dictionary<char, Tuple<int, int>>();
         public Polybius()
         {
-            for (int i = 0; i < 5; i++)//Harfler sırayla bir Dictionarye kaydediliyor.
+            for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
@@ -29,7 +29,7 @@ namespace Polybius
             InitializeComponent();
         }
 
-        public string Encrypt(string raw)//Şifreleme işlemi yapılıyor.
+        public string Encrypt(string raw)
         {
             string encrypted = "";
             for (int i = 0; i < raw.Length; i++)
@@ -79,7 +79,7 @@ namespace Polybius
             }
             return encrypted;
         }
-        public string Decrypt(string raw)//Şifrelenmis metini normal metine çeviriyor.
+        public string Decrypt(string raw)
         {
             string Decrypt = "";
 
@@ -87,6 +87,7 @@ namespace Polybius
             {
                 if (raw[i] >= '0' && raw[i] <= '9')
                 {
+                    //TODO: incele
                     if (raw.Length % 2 == 1)//Eğer rakam sayısı tekse sondaki rakamı almamak için substring metodu kullanılıyor.
                     {
                         raw = raw.Substring(0, raw.Length - 1);
