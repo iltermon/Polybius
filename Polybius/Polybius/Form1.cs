@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//TODO: harfleri dogru olmasa bile dogru yorumlama olayini degistir ö o ü u gibi
+
 namespace Polybius
 {
     public partial class Polybius : Form
     {
-        bool text = true; //to define function of the program
+        bool text = true;
         
         char[,] table = new char[5, 5] { { 'A', 'B', 'C', 'D', 'E' }, { 'F', 'G', 'H', 'I', 'K' }, { 'L', 'M', 'N', 'O', 'P' }, { 'Q', 'R', 'S', 'T', 'U' }, { 'V', 'W', 'X', 'Y', 'Z' } };
         Dictionary<char, Tuple<int, int>> table_dic = new Dictionary<char, Tuple<int, int>>();
@@ -61,8 +61,7 @@ namespace Polybius
             {
                 if (raw[i] >= '0' && raw[i] <= '9')
                 {
-                    //TODO: incele
-                    if (raw.Length % 2 == 1)//Eğer rakam sayısı tekse sondaki rakamı almamak için substring metodu kullanılıyor.
+                    if (raw.Length % 2 == 1)
                     {
                         raw = raw.Substring(0, raw.Length - 1);
                         Decrypt += table[Int32.Parse(raw[i].ToString()) - 1, Int32.Parse(raw[i + 1].ToString()) - 1];
