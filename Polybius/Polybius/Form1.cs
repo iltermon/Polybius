@@ -50,31 +50,6 @@ namespace Polybius
                     {
                         encrypted += ' ';
                     }
-                    else if (raw[i] == 'Ş')
-                    {
-                        encrypted += table_dic['S'].Item1 + 1;
-                        encrypted += table_dic['S'].Item2 + 1;
-                    }
-                    else if (raw[i] == 'Ç')
-                    {
-                        encrypted += table_dic['C'].Item1 + 1;
-                        encrypted += table_dic['C'].Item2 + 1;
-                    }
-                    else if (raw[i] == 'Ö')
-                    {
-                        encrypted += table_dic['O'].Item1 + 1;
-                        encrypted += table_dic['O'].Item2 + 1;
-                    }
-                    else if (raw[i] == 'Ü')
-                    {
-                        encrypted += table_dic['U'].Item1 + 1;
-                        encrypted += table_dic['U'].Item2 + 1;
-                    }
-                    else if (raw[i] == 'Ğ')
-                    {
-                        encrypted += table_dic['G'].Item1 + 1;
-                        encrypted += table_dic['G'].Item2 + 1;
-                    }
                 }
             }
             return encrypted;
