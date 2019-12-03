@@ -28,7 +28,6 @@ namespace Polybius
 
             InitializeComponent();
         }
-
         public string Encrypt(string raw)
         {
             string encrypted = "";
@@ -81,10 +80,8 @@ namespace Polybius
         }
         private void rawTextbox_Click(object sender, EventArgs e)
         {
-
             text = true;
         }
-
         private void rawTextbox_TextChanged(object sender, EventArgs e)
         {
             if (text)
@@ -94,7 +91,6 @@ namespace Polybius
                 resultTextbox.Text = String.Empty;
             }
         }
-
         private void resultTextbox_TextChanged(object sender, EventArgs e)
         {
             if (!text)
@@ -104,12 +100,10 @@ namespace Polybius
                 rawTextbox.Text = String.Empty;
             }
         }
-
         private void resultTextbox_Click(object sender, EventArgs e)
         {
             text = false;
         }
-    
     }
 
 }
