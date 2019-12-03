@@ -35,12 +35,12 @@ namespace Polybius
             {
                 if (raw[i] <= 'Z' && raw[i] >= 'A' || raw[i]==' ')
                 {
-                    if (raw[i] != 'J' && raw[i] != ' ' && raw[i] != 'İ' && raw[i] != 'Ü' && raw[i] != 'Ğ' && raw[i] != 'Ö' && raw[i] != 'Ç' && raw[i] != 'Ş')
+                    if (raw[i] != 'J')
                     {
                         encrypted += table_dic[raw[i]].Item1 + 1;
                         encrypted += table_dic[raw[i]].Item2 + 1;
                     }
-                    else if (raw[i] == 'J' || raw[i] == 'İ')
+                    else if (raw[i] == 'J')
                     {
                         encrypted += table_dic['I'].Item1 + 1;
                         encrypted += table_dic['I'].Item2 + 1;
