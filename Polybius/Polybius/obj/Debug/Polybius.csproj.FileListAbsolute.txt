@@ -16,3 +16,12 @@ C:\Users\İlterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug
 C:\Users\İlterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.Polybius.resources
 C:\Users\İlterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.Properties.Resources.resources
 C:\Users\İlterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.csproj.GenerateResource.Cache
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\bin\Debug\Polybius.exe.config
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.exe
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.pdb
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\bin\Debug\Polybius.exe
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\bin\Debug\Polybius.pdb
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.csprojResolveAssemblyReference.cache
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.Polybius.resources
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.Properties.Resources.resources
+C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.csproj.GenerateResource.Cache
