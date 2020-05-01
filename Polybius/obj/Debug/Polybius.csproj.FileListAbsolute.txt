@@ -25,3 +25,13 @@ C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\
 C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.Polybius.resources
 C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.Properties.Resources.resources
 C:\Users\Ilterkaan Karaca\Documents\GitHub\Polybius\Polybius\Polybius\obj\Debug\Polybius.csproj.GenerateResource.Cache
+E:\Repos\Polybius\Polybius\bin\Debug\Polybius.exe.config
+E:\Repos\Polybius\Polybius\bin\Debug\Polybius.exe
+E:\Repos\Polybius\Polybius\bin\Debug\Polybius.pdb
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.csprojAssemblyReference.cache
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.Polybius.resources
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.Properties.Resources.resources
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.csproj.GenerateResource.cache
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.csproj.CoreCompileInputs.cache
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.exe
+E:\Repos\Polybius\Polybius\obj\Debug\Polybius.pdb

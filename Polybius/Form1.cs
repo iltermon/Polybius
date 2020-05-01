@@ -12,7 +12,7 @@ namespace Polybius
 {
     public partial class Polybius : Form
     {
-        bool text = true;
+        bool mode = true;
         
         char[,] table = new char[5, 5] { { 'A', 'B', 'C', 'D', 'E' }, { 'F', 'G', 'H', 'I', 'K' }, { 'L', 'M', 'N', 'O', 'P' }, { 'Q', 'R', 'S', 'T', 'U' }, { 'V', 'W', 'X', 'Y', 'Z' } };
         Dictionary<char, Tuple<int, int>> table_dic = new Dictionary<char, Tuple<int, int>>();
@@ -35,19 +35,20 @@ namespace Polybius
             {
                 if (raw[i] <= 'Z' && raw[i] >= 'A' || raw[i]==' ')
                 {
-                    if (raw[i] != 'J')
+                    if (raw[i] == ' ')
                     {
-                        encrypted += table_dic[raw[i]].Item1 + 1;
-                        encrypted += table_dic[raw[i]].Item2 + 1;
+                        encrypted += ' ';
+                        
                     }
-                    else if (raw[i] == 'J')
+                    else if (raw[i] == 'J' || raw[i] == 'i')
                     {
                         encrypted += table_dic['I'].Item1 + 1;
                         encrypted += table_dic['I'].Item2 + 1;
                     }
-                    else if (raw[i] == ' ')
+                    else if (raw[i] != 'J')
                     {
-                        encrypted += ' ';
+                        encrypted += table_dic[raw[i]].Item1 + 1;
+                        encrypted += table_dic[raw[i]].Item2 + 1;
                     }
                 }
             }
@@ -79,11 +80,11 @@ namespace Polybius
         }
         private void rawTextbox_Click(object sender, EventArgs e)
         {
-            text = true;
+            mode = true;
         }
         private void rawTextbox_TextChanged(object sender, EventArgs e)
         {
-            if (text)
+            if (mode)
                 resultTextbox.Text = Encrypt(rawTextbox.Text.ToUpper());
             if (string.IsNullOrWhiteSpace(rawTextbox.Text))
             {
@@ -92,7 +93,7 @@ namespace Polybius
         }
         private void resultTextbox_TextChanged(object sender, EventArgs e)
         {
-            if (!text)
+            if (!mode)
                 rawTextbox.Text = Decrypt(resultTextbox.Text);
             if (string.IsNullOrWhiteSpace(resultTextbox.Text))
             {
@@ -101,7 +102,7 @@ namespace Polybius
         }
         private void resultTextbox_Click(object sender, EventArgs e)
         {
-            text = false;
+            mode = false;
         }
     }
 
