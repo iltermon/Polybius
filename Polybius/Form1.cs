@@ -85,7 +85,7 @@ namespace Polybius
         private void rawTextbox_TextChanged(object sender, EventArgs e)
         {
             if (mode)
-                resultTextbox.Text = Encrypt(rawTextbox.Text.ToUpper());
+                resultTextbox.Text = Encrypt(rawTextbox.Text.Replace("i", "ı").ToUpper());
             if (string.IsNullOrWhiteSpace(rawTextbox.Text))
             {
                 resultTextbox.Text = String.Empty;
@@ -94,7 +94,7 @@ namespace Polybius
         private void resultTextbox_TextChanged(object sender, EventArgs e)
         {
             if (!mode)
-                rawTextbox.Text = Decrypt(resultTextbox.Text);
+                rawTextbox.Text = Decrypt(resultTextbox.Text.Replace("i", "I"));
             if (string.IsNullOrWhiteSpace(resultTextbox.Text))
             {
                 rawTextbox.Text = String.Empty;
