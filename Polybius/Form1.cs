@@ -60,7 +60,11 @@ namespace Polybius
 
             for (int i = 0; i < raw.Length && raw.Length > 1; i++)
             {
-                if (raw[i] >= '0' && raw[i] <= '9')
+                if (raw[i] == ' ')
+                {
+                    Decrypt += ' ';
+                }
+                else if (raw[i] >= '0' && raw[i] <= '9')
                 {
                     if (raw.Length % 2 == 1)
                     {
@@ -70,11 +74,13 @@ namespace Polybius
                     }
                     else
                     {
+                        //TODO: burada bir şeyler yaşanıyor onu bir çöz sana zahmet
                         Decrypt += table[Int32.Parse(raw[i].ToString()) - 1, Int32.Parse(raw[i + 1].ToString()) - 1];
                         i++;
                     }
 
                 }
+                
             }
             return Decrypt;
         }
