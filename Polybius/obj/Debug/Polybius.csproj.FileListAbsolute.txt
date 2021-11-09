@@ -35,3 +35,14 @@ E:\Repos\Polybius\Polybius\obj\Debug\Polybius.csproj.GenerateResource.cache
 E:\Repos\Polybius\Polybius\obj\Debug\Polybius.csproj.CoreCompileInputs.cache
 E:\Repos\Polybius\Polybius\obj\Debug\Polybius.exe
 E:\Repos\Polybius\Polybius\obj\Debug\Polybius.pdb
+C:\repos\Polybius\Polybius\bin\Debug\Polybius.exe.config
+C:\repos\Polybius\Polybius\bin\Debug\Polybius.exe
+C:\repos\Polybius\Polybius\bin\Debug\Polybius.pdb
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.csproj.AssemblyReference.cache
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.csproj.SuggestedBindingRedirects.cache
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.Polybius.resources
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.Properties.Resources.resources
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.csproj.GenerateResource.cache
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.csproj.CoreCompileInputs.cache
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.exe
+C:\repos\Polybius\Polybius\obj\Debug\Polybius.pdb
